@@ -1,0 +1,70 @@
+package TaskOperator;
+import java.util.ArrayList;
+
+public class Main {
+	ArrayList<task> task = new ArrayList<task>();
+	public static task[] task;
+	public static void main(String[] args) {
+		
+	}
+	private void setTask() {
+		
+	}
+	private void createTask(String name,String[] tag,String tips) {
+		for(int n = 0;n < task.length;n++) {
+			if(task[n].equals(null))
+				//{
+				task[n].setId(n); 
+				task[n].setName(name);
+				for(int m = 0;m < task.length;m++) {
+					task[n].addTag(tag[n]);
+				}
+				task[n].setTips(tips);
+				//
+				break;
+			}
+		}
+	}
+	private void liskTask() {
+		
+	}
+	private void completeTask() {
+		
+	}
+	private void removeTask() {
+		
+	}
+}
+
+//タスク(仮)
+class task{
+	private boolean complete;
+	private String name;
+	private int id;
+	ArrayList<String> tag = new ArrayList<String>();
+
+	private String tips;
+	task() {
+		complete = false;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public void addTag(String tagName) {
+		for() {
+			
+		}
+	}
+	public void removeTag(String tagName) {
+		
+	}
+	public void setTips(String tips) {
+		this.tips = tips;
+	}
+	public void completeTask() {
+		complete = true;
+	}
+}

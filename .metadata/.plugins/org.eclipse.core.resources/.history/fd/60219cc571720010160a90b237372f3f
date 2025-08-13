@@ -1,0 +1,99 @@
+package TaskOperator;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Main {
+	ArrayList<task> task = new ArrayList<task>();
+	//public static task[] task;
+	public static void main(String[] args) {
+		public Scanner(InputStream source);
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Select Mode\n"+
+				           "1:Create Task"+
+				           "2:List Task"
+						  );
+		
+	}
+	private void inputTask() {
+		public Scanner(InputStream source);
+		Scanner scanner = new Scanner(System.in);
+	}
+	//private void setTask() {}
+	private void createTask(String name,ArrayList<String> tag,String info) {
+		task.add(new task());
+		int id = task.size();
+		task.get(id).setId(id);
+		task.get(id).setName(name);
+		for(String tmp:tag) {
+			task.get(id).addTag(tmp);
+		}
+		task.get(id).setInfo(info);
+		
+	}
+	private void liskTask() {
+		for(task tmp:task) {
+			String tagLine = "";
+			for(String tagTmp:tmp.getTag()) {
+				tagLine += "/";
+				tagLine += tagTmp;
+			}
+			System.out.println("ID:      "+tmp.getId()+"\n"+
+							   "Complete:"+tmp.getComplete()+"\n"+
+							   "Name:    "+tmp.getName()+"\n"+
+							   "Tag:     "+tagLine+"\n"+
+							   "Info:    "+tmp.getInfo()
+								);
+		}
+	}
+	//private void completeTask() {}
+	//private void removeTask() {}
+}
+
+//タスク(仮)
+class task{
+	private int id;
+	private boolean complete;
+	private String name;
+	ArrayList<String> tag = new ArrayList<String>();
+	private String info;
+	task() {
+		complete = false;
+	}
+	
+	public int getId() {
+		return id;
+	}
+	public boolean getComplete() {
+		return complete;
+	}
+	public String getName() {
+		return name;
+	}
+	public ArrayList<String> getTag(){
+		return tag;
+	}
+	public String getInfo() {
+		return info;
+	}
+	
+	
+	public void setId(int id) {
+		this.id = id;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public void addTag(String tagName) {
+		this.tag.add(tagName);
+	}
+	public void removeTag(String tagName) {
+		
+	}
+	public void setInfo(String info) {
+		this.info = info;
+	}
+	public void completeTask() {
+		complete = true;
+	}
+}
